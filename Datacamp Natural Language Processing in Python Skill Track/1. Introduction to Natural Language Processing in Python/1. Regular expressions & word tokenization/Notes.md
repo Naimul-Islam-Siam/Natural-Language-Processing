@@ -23,3 +23,15 @@
 `re.search()` vs `re.match()`
 - `re.search` searches the entire word, and finds given pattern wherever it is in the word (if the pattern exists in the word in the first place)
 - `re.match` searches the beginning, if the given pattern doesn't match with the beginning then it gives negative result
+
+
+### Regex Ranges and Groups
+Range is denoted using `[]` and Group is denoted using `()`
+
+Groups are useful while defining an explicit group of characters.
+
+- [A-Za-z]+ --> Upper and Lowercase English Alphabet
+- [0-9] --> Numbers from `0` to `9`
+- [A-Za-z\-\.]+ --> Upper and lowercase english alphabet including `-` and `.`
+- (a-z) --> `a`, `-` and `z`
+- (\s+|,) --> `spaces` or a `comma`
