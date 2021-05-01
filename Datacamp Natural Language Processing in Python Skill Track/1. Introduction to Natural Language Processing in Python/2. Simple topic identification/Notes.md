@@ -23,3 +23,15 @@ Genism uses a simple bag of words model which transforms each document into a ba
 Genism corpus is a list of lists, each list item representing one document. Each document is now a series of tuples, the first item representing the tokenid from the dictionary and the second item representing the frequency of the token in the document.
 
 Unlike `Counter` based bag of words, `genism` models can easily be saved, updated and reused.
+
+
+## TF-IDF
+
+Term Frequency - Inverse Document Frequency
+
+- Allows to determine the most important words in each document in a corpus
+- Each corpus might have shared words beyond just stop words, these common words are like stop words and should be removed or at least down weighted in importance
+- For example: In astronomy the word sky must be used a lot, but this word is not so important. So we downweight that
+
+* So, TF-IDF ensures common words don't show up as keywords
+* Keeps the document specific frequent words weighted high and the common words across the entire corpus weighted low
